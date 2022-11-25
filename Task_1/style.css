@@ -1,0 +1,83 @@
+:root
+{
+    --bg-color: hsl(135, 65%, 39%);
+    --text-color: hsl(0, 0%, 100%);
+    --form-bg-color: hsl(0, 9%, 13%);
+    --ans-color: hsl(136, 88%, 3%);
+    --placeholder-color: hsl(0, 0%, 69%);
+}
+
+body
+{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 2em 4em;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+.heading
+{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.subheading
+{
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.form-container
+{
+    background-color: var(--form-bg-color);
+    padding: 3em;
+    width: clamp(30ch, 50% , 60ch);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+    border-radius: 8px;
+}
+.form__question
+{
+    display: flex;
+    flex-direction: column;
+}
+.form-ques
+{
+    margin-block-end: 0.5em;
+}
+.form-ans
+{
+    background-color: var(--ans-color);
+    color: var(--placeholder-color) ;
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    resize: none;
+}
+#form-ans7
+{
+    resize: vertical;
+    min-height: 6em;
+}
+#submit-button
+{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    width: fit-content;
+    padding: 1em 1.25em;
+    transition: background-color 250ms ease;
+}
+#submit-button:hover
+{
+    background-color: hsl(135, 70%, 25%) ;
+    
+}

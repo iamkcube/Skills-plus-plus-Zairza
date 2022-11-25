@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill++ Survey Form</title>
+	<link rel="icon" type="image/png" href="https://img.icons8.com/ultraviolet/32/null/plus-2-math.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">Skill++ Survey Form</div>
+    <div class="subheading">
+        Thank You for taking time to help us improve the platform
+    </div>
+    <form class="form-container">
+        <div class="form__question">
+            <label for="form-ans1" class="form-ques ques1">What is your name?</label>
+            <input type="text" id="form-ans1" class="form-ans" placeholder="Enter your name" />
+        </div>
+        <div class="form__question">
+            <label for="form-ans2" class="form-ques ques2">What is your email address?</label>
+            <input type="text" id="form-ans2" class="form-ans" placeholder="Enter your email address" />
+        </div>
+        <div class="form__question">
+            <label for="form-ans3" class="form-ques ques3">What is your age?</label>
+            <input type="text" id="form-ans3" class="form-ans" placeholder="Enter your age" />
+        </div>
+        <div class="form__question">
+            <label for="form-ans4" class="form-ques ques4">Which role best describes your current role?</label>
+            <select name="cars" id="cars" class="form-ans">
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="part-time-job">Part Time Job</option>
+                <option value="freelancer">Freelancer</option>
+              </select>
+            <!-- <input type="text" id="form-ans4" class="form-ans" /> -->
+        </div>
+        <div class="form__question">
+            <label for="form-ans5" class="form-ques ques5">Would you recommend [Company name] to a friend?</label>
+            <div class="form-radio">
+                <input type="radio" id="form-ans5-1" class="form-ans" name="form-ans5" />
+                <label for="form-ans5-1">Definitely</label>
+            </div>
+            <div class="form-radio">
+                <input type="radio" id="form-ans5-2" class="form-ans" name="form-ans5" />
+                <label for="form-ans5-2">Maybe</label>
+            </div>
+            <div class="form-radio">
+                <input type="radio" id="form-ans5-3" class="form-ans" name="form-ans5" />
+                <label for="form-ans5-3">Not Sure</label>
+            </div>
+        </div>
+        <div class="form__question">
+            <label for="form-ans6" class="form-ques ques6">What would you like to see improved?<br />(Check all that
+                apply)</label>
+            <div class="form-radio">
+                <input type="radio" id="form-ans6-1" class="form-ans" name="form-ans6" />
+                <label for="form-ans6-1">Front-end Projects</label>
+            </div>
+            <div class="form-radio">
+                <input type="radio" id="form-ans6-2" class="form-ans" name="form-ans6" />
+                <label for="form-ans6-2">Back-end Projects</label>
+            </div>
+            <div class="form-radio">
+                <input type="radio" id="form-ans6-3" class="form-ans" name="form-ans6" />
+                <label for="form-ans6-3">Definitely</label>
+            </div>
+        </div>
+        <div class="form__question">
+            <label for="form-ans7" class="form-ques ques7">Any comments or suggestions?</label>
+            <textarea name="form-ans7" class="form-ans" id="form-ans7" cols="30" rows="7" placeholder="Enter Your Comments Here..."></textarea>
+        </div>
+        <button type="submit" id="submit-button">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
