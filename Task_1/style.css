@@ -4,7 +4,7 @@
     --text-color: hsl(0, 0%, 100%);
     --form-bg-color: hsl(0, 9%, 13%);
     --ans-color: hsl(136, 88%, 3%);
-    --placeholder-color: hsl(0, 0%, 69%);
+    --placeholder-color: hsl(0, 0%, 75%);
 }
 *,
 *::after,
@@ -13,13 +13,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body
 {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 2em 4em;
-    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -32,6 +32,7 @@ body
     font-weight: 600;
     word-break: keep-all;
     word-wrap: none;
+    text-align: center;
 }
 
 .subheading
@@ -39,13 +40,15 @@ body
     font-size: clamp(0.5rem, 3vw, 1rem);
     font-style: italic;
     font-weight: 300;
+    text-align: center;
 }
 
 .form-container
 {
     background-color: var(--form-bg-color);
-    padding: 1.5em;
-    width: clamp(20rem, 70%, 60ch);
+    padding: 2em;
+    padding-inline: max(3%,5ch);
+    width: clamp(20rem, 70%, 80ch);
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25em;
@@ -73,16 +76,45 @@ body
     resize: none;
 }
 
-.form-ans:is(input[type="text"], textarea, select):focus-within
+.form-ans:is(input[type="text"],input[type="email"],input[type="number"], textarea, select):focus-within
 {
     outline: 0.1rem solid var(--bg-color);
 }
+.form-radio
+{
+    display: flex;
+    color: var(--placeholder-color);
+    transition: color 250ms ease;
+    align-items: center;
+    font-size: 95%;
+    gap: 0.25em;
+}
+
+.form-radio input:checked
+{
+    background-color: var(--bg-color);  
+    color: red; 
+    transform: scale(1.2);
+    accent-color: var(--bg-color);
+}
+.form-radio:hover, 
+.form-radio>input:checked + label
+{
+    color: var(--text-color);
+}
+#form-ans2:invalid,
+#form-ans3:invalid
+{
+    outline: 0.1rem solid red;
+}
+
 
 #form-ans7
 {
     resize: vertical;
-    min-height: 6em;
+    min-height: 8em;
 }
+
 
 #submit-button
 {
@@ -113,5 +145,9 @@ body
     #submit-button
     {
         font-size: 0.75rem;
+    }
+    .form-container
+    {
+        padding: 1.5em;
     }
 }
