@@ -6,7 +6,14 @@
     --ans-color: hsl(136, 88%, 3%);
     --placeholder-color: hsl(0, 0%, 69%);
 }
-
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body
 {
     background-color: var(--bg-color);
@@ -37,8 +44,8 @@ body
 .form-container
 {
     background-color: var(--form-bg-color);
-    padding: 3em;
-    width: clamp(30ch, 70%, 60ch);
+    padding: 1em;
+    width: clamp(20rem, 70%, 60ch);
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25em;
