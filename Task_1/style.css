@@ -44,7 +44,7 @@ body
 .form-container
 {
     background-color: var(--form-bg-color);
-    padding: 1em;
+    padding: 1.5em;
     width: clamp(20rem, 70%, 60ch);
     display: grid;
     grid-template-columns: 1fr;
