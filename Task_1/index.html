@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skill++ Survey Form</title>
-	<link rel="icon" type="image/png" href="https://img.icons8.com/ultraviolet/32/null/plus-2-math.png" />
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ultraviolet/32/null/plus-2-math.png" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,10 +15,10 @@
     <div class="subheading">
         Thank You for taking time to help us improve the platform
     </div>
-    <form class="form-container" method="post">
+    <form class="form-container" method="post" action="submit">
         <div class="form__question">
             <label for="form-ans1" class="form-ques ques1">What is your name?</label>
-            <input type="text" id="form-ans1" class="form-ans" placeholder="Enter your name" />
+            <input type="text" id="form-ans1" class="form-ans" placeholder="Enter your name" required="required" />
         </div>
         <div class="form__question">
             <label for="form-ans2" class="form-ques ques2">What is your email address?</label>
@@ -35,8 +35,7 @@
                 <option value="full-time-job">Full Time Job</option>
                 <option value="part-time-job">Part Time Job</option>
                 <option value="freelancer">Freelancer</option>
-              </select>
-            <!-- <input type="text" id="form-ans4" class="form-ans" /> -->
+            </select>
         </div>
         <div class="form__question">
             <label for="form-ans5" class="form-ques ques5">Would you recommend [Company name] to a friend?</label>
@@ -71,7 +70,8 @@
         </div>
         <div class="form__question">
             <label for="form-ans7" class="form-ques ques7">Any comments or suggestions?</label>
-            <textarea name="form-ans7" class="form-ans" id="form-ans7" cols="30" rows="7" placeholder="Enter Your Comments Here..."></textarea>
+            <textarea name="form-ans7" class="form-ans" id="form-ans7" cols="30" rows="7"
+                placeholder="Enter Your Comments Here..."></textarea>
         </div>
         <button type="submit" id="submit-button">
             Submit
