@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+
 :root
 {
     --bg-color: hsl(135, 65%, 39%);
@@ -6,6 +8,7 @@
     --ans-color: hsl(136, 88%, 3%);
     --placeholder-color: hsl(0, 0%, 75%);
 }
+
 *,
 *::after,
 *::before
@@ -15,6 +18,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body
 {
     background-color: var(--bg-color);
@@ -47,7 +51,7 @@ body
 {
     background-color: var(--form-bg-color);
     padding: 2em;
-    padding-inline: max(3%,5ch);
+    padding-inline: max(3%, 5ch);
     width: clamp(20rem, 70%, 80ch);
     display: grid;
     grid-template-columns: 1fr;
@@ -77,10 +81,11 @@ body
     resize: none;
 }
 
-.form-ans:is(input[type="text"],input[type="email"],input[type="number"], textarea, select):focus-within
+.form-ans:is(input[type="text"], input[type="email"], input[type="number"], textarea, select):focus-within
 {
     outline: 0.1rem solid var(--bg-color);
 }
+
 .form-radio
 {
     display: flex;
@@ -93,16 +98,18 @@ body
 
 .form-radio input:checked
 {
-    background-color: var(--bg-color);  
-    color: red; 
+    background-color: var(--bg-color);
+    color: red;
     transform: scale(1.2);
     accent-color: var(--bg-color);
 }
-.form-radio:hover, 
-.form-radio>input:checked + label
+
+.form-radio:hover,
+.form-radio>input:checked+label
 {
     color: var(--text-color);
 }
+
 #form-ans2:invalid,
 #form-ans3:invalid
 {
@@ -143,10 +150,12 @@ body
         margin: 1em 2em;
         gap: 1em;
     }
+
     #submit-button
     {
         font-size: 0.75rem;
     }
+
     .form-container
     {
         padding: 2rem 1.5em;
