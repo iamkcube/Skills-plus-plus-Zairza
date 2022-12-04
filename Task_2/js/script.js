@@ -5,7 +5,7 @@ const cardHolder = document.querySelector('.latest-news__cards')
 
 
 async function main() {
-    let data = await fetch('../assets/data.json')
+    let data = await fetch('https://raw.githubusercontent.com/iamkcube/Skills-plus-plus-Zairza/main/Task_2/assets/data.json')
     let cards = await data.json()
     // console.log(cards);
 
