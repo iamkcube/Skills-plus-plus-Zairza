@@ -8,7 +8,8 @@
   --eco-time-bg-color: hsl(0, 0%, 90%);
   --newsletter-bg: hsl(223, 53%, 35%);
   --footer-colour: hsla(0, 0%, 90%);
-  --sans-serif: "Lato", sans-serif; /* ------------ */
+  --sans-serif: "Lato", sans-serif;
+  /* ------------ */
   --serif: "Merriweather", serif;
   --transition-secs: 200ms;
   --timing-function: ease-in-out;

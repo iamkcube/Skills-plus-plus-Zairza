@@ -22,7 +22,8 @@
     // --serif: "Josefin Slab", serif;
     // --sans-serif: "Raleway", sans-serif;
     // --serif: "Playfair Display", serif;
-    --sans-serif: "Lato", sans-serif; /* ------------ */
+    --sans-serif: "Lato", sans-serif;
+    /* ------------ */
     --serif: "Merriweather", serif;
     --transition-secs: 200ms;
     --timing-function: ease-in-out;
@@ -122,7 +123,7 @@ body
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    gap: clamp(0em, 2em - 5vw , 1em);
+    gap: clamp(0em, 2em - 5vw, 1em);
 
     &::before
     {
