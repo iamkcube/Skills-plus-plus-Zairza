@@ -8,31 +8,36 @@ const fetchBtn = document.querySelector(".fetch-users");
 
 fetchBtn.addEventListener("click", () => {
 	fetchData();
-	fetchBtn.disabled = true;
 });
 
 async function fetchData() {
-	cards.innerHTML = `Loading...`;
-	let data = await fetch(url);
-	let users = await data.json();
-	cards.innerHTML = ``;
-	let sortedUsers = users.results;
-	sortedUsers.sort((user1, user2) =>
-		user1.name.first.localeCompare(user2.name.first)
-	);
-
-	for (const user of sortedUsers) {
-		let userAddress = `${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state}, ${user.location.country}, ${user.location.postcode}`;
-
-		cards.innerHTML += cardTemplate(
-			Object.values(user.name).join(" "),
-			user.email,
-			userAddress,
-			capitalise(user.gender),
-			user.dob.date.slice(0, 10),
-			user.phone,
-			user.picture.large
+	try {
+		cards.innerHTML = `Loading...`;
+		let data = await fetch(url);
+		let users = await data.json();
+		cards.innerHTML = ``;
+		let sortedUsers = users.results;
+		sortedUsers.sort((user1, user2) =>
+			user1.name.first.localeCompare(user2.name.first)
 		);
+
+		for (const user of sortedUsers) {
+			let userAddress = `${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state}, ${user.location.country}, ${user.location.postcode}`;
+
+			cards.innerHTML += cardTemplate(
+				Object.values(user.name).join(" "),
+				user.email,
+				userAddress,
+				capitalise(user.gender),
+				user.dob.date.slice(0, 10),
+				user.phone,
+				user.picture.large
+			);
+		}
+		fetchBtn.disabled = true;
+	} catch (error) {
+		console.log(error);
+		cards.innerHTML = `Can't get user data. Please try again.`
 	}
 }
 
