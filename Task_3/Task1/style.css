@@ -33,11 +33,16 @@ button
     padding: 0.75em 1.5em;
     font-size: 2rem;
     border: none;
-    background: rgb(40, 156, 119);
+    background: hsl(161, 59%, 38%);
     color: #FFF;
     border-radius: 16px;
     position: relative;
     text-align: center;
+}
+button:is(:hover, :focus, :focus-within)
+{
+    transform: scale(1.05);
+    background: hsl(161, 69%, 30%);
 }
 .counter-number
 {
