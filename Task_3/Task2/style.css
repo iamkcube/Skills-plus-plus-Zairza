@@ -146,3 +146,11 @@ body
     background-color:var(--card-bg);
     color: white;
 }
+.fetch-users:disabled,
+.fetch-users:disabled:is(:hover, :focus, :focus-within)
+{
+    background-color: inherit;
+    color: inherit;
+    opacity: 0.7;
+    border: 0.2rem solid grey;
+}
