@@ -379,13 +379,13 @@ main
         transition: outline-color var(--transition-secs) var(--timing-function);
 
 
-        // &:focus-within
-        // {
-        //     outline: 0.1rem solid var(--form-orange);
-        //     outline-offset: 0;
-        // }
+        &:focus-within
+        {
+            outline: 0.1rem solid var(--form-orange);
+            outline-offset: 0;
+        }
 
-        &:invalid
+        &:invalid:not(:placeholder-shown)
         {
             outline: 0.15rem solid hsl(0, 100%, 57%);
             outline-offset: 0.15rem;
@@ -397,15 +397,10 @@ main
             outline-offset: 0.15rem;
         }
 
-        &[value=""]:not(:focus-within)
+        &:placeholder-shown:not(:focus-within)
         {
             outline: none;
-        }
 
-        &[value=""]
-        {
-            outline: 0.1rem solid var(--form-orange);
-            outline-offset: 0;
         }
     }
 

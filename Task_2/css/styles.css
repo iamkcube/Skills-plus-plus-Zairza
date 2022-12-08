@@ -275,7 +275,11 @@ main {
   font-size: clamp(0.9rem, 2vw + 0.4rem, 1rem);
   transition: outline-color var(--transition-secs) var(--timing-function);
 }
-.newsletter-email:invalid {
+.newsletter-email:focus-within {
+  outline: 0.1rem solid var(--form-orange);
+  outline-offset: 0;
+}
+.newsletter-email:invalid:not(:placeholder-shown) {
   outline: 0.15rem solid hsl(0deg, 100%, 57%);
   outline-offset: 0.15rem;
 }
@@ -283,12 +287,8 @@ main {
   outline: 0.15rem solid hsl(129deg, 100%, 57%);
   outline-offset: 0.15rem;
 }
-.newsletter-email[value=""]:not(:focus-within) {
+.newsletter-email:placeholder-shown:not(:focus-within) {
   outline: none;
-}
-.newsletter-email[value=""] {
-  outline: 0.1rem solid var(--form-orange);
-  outline-offset: 0;
 }
 .newsletter-btn {
   grid-column: -2/-1;
